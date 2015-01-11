@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/main.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+</head>
+<body onload="resetGame()">
+    <p id="playerTurn"></p>
+    <table id="grid" align="center">
+        <tr>
+            <td onclick="makeMove('1A')"><div class = "grid00" id="1A"></div></td> 
+            <td onclick="makeMove('2A')"><div class = "grid10" id="2A"></div></td>
+            <td onclick="makeMove('3A')"><div class = "grid20" id="3A"></div></td>
+        </tr>
+        <tr>
+            <td onclick="makeMove('1B')"><div class = "grid01" id="1B"></div></td> 
+            <td onclick="makeMove('2B')"><div class = "grid11" id="2B"></div></td>
+            <td onclick="makeMove('3B')"><div class = "grid21" id="3B"></div></td>
+        </tr> 
+        <tr>
+            <td onclick="makeMove('1C')"><div class = "grid02" id="1C"></div></td> 
+            <td onclick="makeMove('2C')"><div class = "grid12" id="2C"></div></td>
+            <td onclick="makeMove('3C')"><div class = "grid22" id="3C"></div></td>
+        </tr>
+    </table>
+    <form id="playerone" onsubmit="return false;">
+        <input type="text" id="player1" placeholder="Player One">
+        <input type="submit" onclick="addName()" value="Enter">
+    </form>
+    <form id="playertwo" onsubmit="return false;">
+        <input type="text" id="player2" placeholder="Player Two">
+        <input type="submit" onclick="addName()" value="Enter">
+    </form>
+    <h2 id="error"></h2>
+    <input id="clickMe" type="button" value="Reset Game!" onclick="resetGame()" />
+</body>
+</body>
+</html> 
